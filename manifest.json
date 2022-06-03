@@ -10,5 +10,8 @@
 	"action": {
 		"default_title": "Edit",
 		"default_icon": "/icons/inactive.png"
+	},
+	"icons": {
+		"64": "/icons/active.png"
 	}
 }
