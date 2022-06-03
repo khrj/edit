@@ -5,10 +5,15 @@ chrome.action.onClicked.addListener(tab => {
 	})
 })
 
-chrome.runtime.onMessage.addListener(event => {
+chrome.runtime.onMessage.addListener(async event => {
+	const [{ id: tabId }] = await chrome.tabs.query({
+		active: true,
+		currentWindow: true,
+	})
+
 	event.message
-		? chrome.action.setIcon({ path: "icons/active.png" })
-		: chrome.action.setIcon({ path: "icons/inactive.png" })
+		? chrome.action.setIcon({ path: "icons/active.png", tabId })
+		: chrome.action.setIcon({ path: "icons/inactive.png", tabId })
 })
 
 const toggleDesignMode = () => {

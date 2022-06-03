@@ -3,7 +3,7 @@
 	"description": "Edit any text, on any page.",
 	"version": "0.1",
 	"manifest_version": 3,
-	"permissions": ["activeTab", "scripting"],
+	"permissions": ["activeTab", "scripting", "tabs"],
 	"background": {
 		"service_worker": "background.js"
 	},
