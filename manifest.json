@@ -1,0 +1,14 @@
+{
+	"name": "Edit",
+	"description": "Edit any text, on any page.",
+	"version": "0.1",
+	"manifest_version": 3,
+	"permissions": ["activeTab", "scripting"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_title": "Edit",
+		"default_icon": "/icons/inactive.png"
+	}
+}
